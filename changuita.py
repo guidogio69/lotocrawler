@@ -9,7 +9,8 @@ import urllib
 from datetime import timedelta, date
 import time
 
-sopa = urllib.urlopen('http://www.loteriadesalta.com/loteria-ws/api/extracto/CHANGUITA/01-10-2015').read()
+##esto me parece esta al pedo
+##sopa = urllib.urlopen('http://www.loteriadesalta.com/loteria-ws/api/extracto/CHANGUITA/01-10-2015').read()
 
 def daterange(start_date, end_date):
     for n in range(int ((end_date - start_date).days)):
@@ -23,6 +24,7 @@ def grabartxt():
 	archi=open('changuita-'+fecha,'a')
 	archi.write(sopa)
 	archi.close()
+#Fecha inicio y fin crawleo
 start_date = date(2015, 1, 1)
 end_date = date(2015, 12, 1)
 	
